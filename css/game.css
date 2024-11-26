@@ -1,0 +1,91 @@
+@import url('reset.css');
+
+body {
+    background: url(../img/fundo1.png) center no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    color: aqua;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+
+}
+
+header {
+    background-color: rgb(96, 93, 240);
+    width: calc(100% - 10%);
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 1rem  1rem;
+    border-radius: 8px;
+    box-shadow: 3px 3px;
+}
+
+.grid {
+max-width: 700px;
+grid-template-columns: repeat(7,1fr);
+display: grid;
+gap: .5rem;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 7rem;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+}
+
+/* .card:active {
+    transform: rotateY(180deg);
+} */
+
+.face {
+width: 100%;
+height: 100%;
+position: absolute;
+box-shadow: 4px 4px 8px #00eeff;
+border-radius: 5px;
+background-size: cover !important;
+}
+
+.front {
+    /* background: url(../images/foto\ 1.png) center; */ 
+     transform: rotateY(180deg); 
+}
+
+.back {
+    background: url(../img/fundo3.png) center;
+    backface-visibility: hidden;
+}
+
+/* classses que vão ser adicionadas com javascript */
+.revela-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .card {
+        aspect-ratio: 3/5;
+        width: 4rem;
+    }
+}

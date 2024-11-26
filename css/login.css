@@ -1,0 +1,65 @@
+@import url('reset.css');
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: url('../img/Tela_de_fundo.png');
+    background-size: cover;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 4rem;
+}
+
+.login__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.login__header img {
+    width: 20rem;
+}
+
+.login__header h1 {
+    color: rgb(58, 212, 58);
+    text-shadow: 4px 4px #000000, 6px 6px #fff;
+    margin-top: 2rem;
+}
+
+.login__input {
+    border: 3px solid #000000;
+    padding: .7rem;
+    border-radius: 8px;
+    color: darkslategray;
+    outline-color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 1rem;
+}
+
+.login__button {
+    width: 100%;
+    padding: .7rem;
+    max-width: 350px;
+    border-radius: 8px;
+    background-color: rgb(208, 218, 69);
+    color: #000;
+    text-shadow: 2px 2px #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.login__button:disabled {
+    background-color: #c2c2c2;
+    cursor: auto;
+}
